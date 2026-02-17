@@ -122,8 +122,9 @@ int main() {
     delete[] arr1;
     delete[] arr2;
     delete[] result;
-    // Упражнение 4: линейный самоадресуемый список из 10 элементов.
-    // TODO: сформируйте список и выведите элементы по порядку.
+   
+
+
     const int SIZE10 = 10;
 
     Node* head = new Node;
