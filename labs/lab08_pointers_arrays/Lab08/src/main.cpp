@@ -1,21 +1,50 @@
 #include <iostream>
 
-// Lab 08
-// TODO: реализуйте решение по заданию в labs/lab08_pointers_arrays/README.md
-//
-// Рекомендация по выводу:
-// - без лишнего текста
-// - числа через пробел
-// - если несколько строк — в фиксированном порядке
+using namespace std;
+
+
+
 int main() {
-    // Упражнение 1: объяснить использование типов/переменных в коде (без ввода).
-    // TODO: при необходимости вывести пояснения/результаты.
+    setlocale(LC_ALL, "RU");
+    const int size = 10;
+    int size2 = 12;
+    int _mass1[size];
+    int _mass2[size];
+    int* _mass3 = new int[size2];
+    int* _mass4 = new int[size2];
+   
 
-    // Упражнение 2: найти ошибки в коде (без ввода).
-    // TODO: при необходимости вывести пояснения/результаты.
+    for (int i = 0; i < size; i++)
+    {
+        _mass1[i] = i * i;
+        cout << _mass1[i] << " ";
+    }
+    cout << endl;
+    
+    for (int* ptr = _mass2; ptr < _mass2 + size; ptr++) {
+        *ptr = (ptr - _mass2) * (ptr - _mass2);
 
-    // Упражнение 3: заполнить массивы (10 элементов) разными способами.
-    // TODO: реализуйте 4 варианта заполнения и выведите 10 значений для каждого.
+        cout << *ptr << " ";
+    }
+    cout << endl;
+
+    for (int i = 0; i < size2; i++)
+    {
+        _mass3[i] = i * i;
+        cout << _mass3[i] << " ";
+    }
+    cout << endl;
+    
+    for (int* ptr = _mass4; ptr < _mass4 + size2; ptr++) {
+        *ptr = (ptr - _mass4) * (ptr - _mass4);
+
+        cout << *ptr << " ";
+    }
+    cout << endl;
+
+    delete[] _mass3;
+    delete[] _mass4;
+
 
     // Упражнение 4: линейный самоадресуемый список из 10 элементов.
     // TODO: сформируйте список и выведите элементы по порядку.
