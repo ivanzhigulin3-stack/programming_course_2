@@ -9,6 +9,7 @@ struct Node {
     Node* next;
 };
 
+void III(int& a, int* b);
 
 int main() {
     setlocale(LC_ALL, "RU");
@@ -151,6 +152,16 @@ int main() {
         cout << current->data << " ";
         current = current->next;
     }
-    cout << endl;
+    cout << endl << endl;
+
+    int aa = 0, bb = 0;
+    III(aa, &bb);
+    cout << aa << "  " << bb << endl;
+
     return 0;
+}
+
+void III(int& a, int* b) {
+    a = 100;
+    *b = 120;
 }
