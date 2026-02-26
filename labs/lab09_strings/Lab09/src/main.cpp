@@ -4,16 +4,9 @@
 #include <vector>
 using namespace std;
 
-// Lab 09
-// TODO: реализуйте решение по заданию в labs/lab09_strings/README.md
-//
-// Рекомендация по выводу:
-// - без лишнего текста
-// - числа через пробел
-// - если несколько строк — в фиксированном порядке
+
 int main() {
-    // Упражнения 1–3: демонстрация/анализ строковых функций (без ввода).
-    // TODO: добавьте примеры и вывод результатов.
+
     char str1[20] = "Hello ";
     char str2[20] = "World";
     char str3[30];
@@ -39,7 +32,6 @@ int main() {
 
     cout << endl;
 
-    // Упражнение 4: ввод количества слов и самих слов.
     bool check = false;
     int word_count = 0;
 
@@ -72,16 +64,15 @@ int main() {
     }
     
     
-    for (int i = 0; i < word_count2; ++i) {
+    for (int i = 0; i <= word_count2; ++i) {
 
         std::cin.getline(_words[i], WORD_LEN);
     }
 
-    for (int i = 1; i < word_count2; i += 2) {
+    for (int i = 2; i <= word_count2; i += 2) {
         cout << _words[i] << " ";
     }
 
 
-    // TODO: выведите слова с четными номерами (2, 4, 6, ...), по одному в строке.
     return 0;
 }
