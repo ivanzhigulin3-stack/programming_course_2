@@ -2,13 +2,6 @@
 #include <vector>
 #include <climits>
 using namespace std;
-// Lab 10
-// TODO: реализуйте решение по заданию в labs/lab10_functions/README.md
-//
-// Рекомендация по выводу:
-// - без лишнего текста
-// - числа через пробел
-// - если несколько строк — в фиксированном порядке
 
 struct PackedData {
     int frequencies[18];
